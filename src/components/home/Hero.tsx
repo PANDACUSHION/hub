@@ -58,7 +58,7 @@ export default function Hero() {
       className="container-wide py-6 sm:py-8"
     >
       <div
-        className="grid overflow-hidden lg:grid-cols-[1.05fr_0.95fr]"
+        className="grid overflow-hidden lg:grid-cols-[0.9fr_1.1fr]"
         onFocusCapture={() => setFocused(true)}
         onBlurCapture={handleBlur}
       >
@@ -113,7 +113,7 @@ export default function Hero() {
                 key={item.product.id}
                 src={item.product.image}
                 alt={item.product.title}
-                className={`absolute inset-0 h-full w-full object-contain p-4 transition-opacity duration-700 ${
+                className={`absolute inset-0 h-full w-full object-contain p-2 transition-opacity duration-700 ${
                   index === active ? "opacity-100" : "opacity-0"
                 }`}
               />
