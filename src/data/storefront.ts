@@ -167,7 +167,43 @@ const byId = (id: string): ProductItem => {
   return product;
 };
 
-export const HERO_PRODUCT = byId("insta360-x5");
+export interface HeroSlide {
+  headline: string;
+  blurb: string;
+  product: ProductItem;
+  tone: "coral" | "cobalt" | "paper";
+}
+
+export const HERO_SLIDES: HeroSlide[] = [
+  {
+    headline: "Made for more",
+    blurb:
+      "Flagship 8K 360° capture with a replaceable lens system and AI editing, delivered same day inside Kathmandu Valley.",
+    product: byId("insta360-x5"),
+    tone: "coral",
+  },
+  {
+    headline: "Sound that moves",
+    blurb:
+      "Bold JBL Pro Sound in a waterproof body, with 12 hours of playtime and IP67 protection for long days out.",
+    product: byId("jbl-flip-6"),
+    tone: "paper",
+  },
+  {
+    headline: "Power everything",
+    blurb:
+      "One 300W GaN desktop charger for laptops, tablets, phones and accessories. Eight ports, no clutter.",
+    product: byId("ugreen-nexode-pro-300w"),
+    tone: "cobalt",
+  },
+  {
+    headline: "Charge ahead",
+    blurb:
+      "A 300W power bank that runs two laptops at full speed, with a smart display and app control.",
+    product: byId("anker-prime-26k-300w"),
+    tone: "coral",
+  },
+];
 
 export const EDITORIAL_DROP = {
   lead: byId("jbl-charge-6"),

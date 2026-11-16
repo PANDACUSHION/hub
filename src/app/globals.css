@@ -181,6 +181,21 @@ textarea {
   }
 }
 
+@keyframes heroFade {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-hero-fade {
+  animation: heroFade 420ms ease-out both;
+}
+
 .animate-drawer-in {
   animation: slideInRight 360ms cubic-bezier(0.22, 1, 0.36, 1) both;
 }
@@ -210,7 +225,8 @@ textarea {
   .animate-drawer-out,
   .animate-menu-in,
   .animate-overlay-in,
-  .animate-overlay-out {
+  .animate-overlay-out,
+  .animate-hero-fade {
     animation-duration: 1ms !important;
     animation-iteration-count: 1 !important;
   }
